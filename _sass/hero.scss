@@ -18,4 +18,13 @@
         font-weight: normal;
         -webkit-font-smoothing: antialiased;
     }
+
+    #counter {
+        text-align: center;
+        color: #fff;
+        font-family: 'Roboto Mono',monospace;
+        font-size: 8vw;
+        padding-top: 8vh;
+        line-height: 1.5em;
+    }
 }
