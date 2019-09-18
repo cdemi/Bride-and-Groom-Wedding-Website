@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>
+      {{ site.data.wedding.Bride }} & {{ site.data.wedding.Groom }}
+      {{ site.data.wedding.DateTime | date: "%Y" }}
+    </title>
+
+    <link
+      rel="stylesheet"
+      href="/assets/css/styles.css?{{ site.time | date: '%s%N' }}"
+    />
+  </head>
+
+  <body>
+    {{ content }}
+    <script src="/assets/js/scripts.js?{{ site.time | date: '%s%N' }}"></script>
+  </body>
+</html>
