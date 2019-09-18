@@ -1,6 +1,9 @@
+---
+layout: ''
+---
 {
-    "name": "#MarkAndEl",
-    "short_name": "#MarkAndEl",
+    "name": "#{{ site.data.wedding.ShortName }}",
+    "short_name": "#{{ site.data.wedding.ShortName }}",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,8 +16,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#e9818c",
-    "background_color": "#e9818c",
-    "start_url": "https://www.markandeleanor2019.com/",
+    "theme_color": "{{site.theme-color}}",
+    "background_color": "{{site.theme-color}}",
+    "start_url": "{{ "/" | absolute_url }}",
     "display": "standalone"
 }
