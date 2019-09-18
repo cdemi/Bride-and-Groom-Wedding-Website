@@ -1,0 +1,21 @@
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)),url("{{ site.baseurl}}/assets/images/bannerHero2.jpg");
+    background-position: bottom center;
+    background-size: cover;
+
+    h1 {
+        padding: 0;
+        margin: 0;
+        padding-top: 20vh;
+        font-family: 'Alex Brush', cursive;
+        font-size: 12vw;
+        line-height: 0.8;
+        text-align: center;
+        color: #ffffff;
+        margin: 0 0;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+}

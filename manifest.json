@@ -1,0 +1,20 @@
+{
+    "name": "#MarkAndEl",
+    "short_name": "#MarkAndEl",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#e9818c",
+    "background_color": "#e9818c",
+    "start_url": "https://www.markandeleanor2019.com/",
+    "display": "standalone"
+}
