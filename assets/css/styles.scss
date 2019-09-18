@@ -2,5 +2,7 @@
 ---
 @import url('https://fonts.googleapis.com/css?family=Alex+Brush&display=swap');
 
+$base-url: '{{ site.baseurl}}';
+
 @import 'main';
 @import 'hero';
