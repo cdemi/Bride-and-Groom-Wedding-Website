@@ -14,8 +14,8 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy wedding.json'
   inputs:
-    SourceFolder: '_dataTemplate/'
-    Contents: wedding.json
+    SourceFolder: '_dataTemplate/jamessandra'
+    Contents: '*'
     TargetFolder: '_data/'
     OverWrite: true
 
