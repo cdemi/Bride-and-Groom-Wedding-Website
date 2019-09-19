@@ -6,7 +6,7 @@ PRODID:-//Google Inc//Google Calendar 70.9054//EN
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }} {{ site.data.wedding.CeremonyStart | date: "%Y" }}
+X-WR-CALNAME:{{ site.data.wedding.LongName}} {{ site.data.wedding.CeremonyStart | date: "%Y" }}
 X-WR-TIMEZONE:Europe/Malta
 X-WR-CALDESC:
 BEGIN:VEVENT
@@ -19,13 +19,13 @@ LAST-MODIFIED:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
 LOCATION:{{site.data.wedding.Ceremony.Location.FriendlyName | replace: ",", "\,"}}
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}'s Wedding Ceremony
+SUMMARY:{{ site.data.wedding.LongName}}'s Wedding Ceremony
 DESCRIPTION:#{{site.data.wedding.HashTag}} \n{{ "/" | absolute_url }}
-ORGANIZER:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}
+ORGANIZER:{{ site.data.wedding.LongName}}
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}'s Wedding Ceremony #{{site.data.wedding.HashTag}} {{ "/" | absolute_url }}
+DESCRIPTION:{{ site.data.wedding.LongName}}'s Wedding Ceremony #{{site.data.wedding.HashTag}} {{ "/" | absolute_url }}
 TRIGGER:-P0DT4H0M0S
 END:VALARM
 END:VEVENT
@@ -36,15 +36,15 @@ DTSTAMP:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
 UID:50j9mbi5rtl1e851g92fi77qv5@google.com
 CREATED:20170827T102005Z
 DESCRIPTION:#{{site.data.wedding.HashTag}} \n{{ "/" | absolute_url }}
-ORGANIZER:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}
+ORGANIZER:{{ site.data.wedding.LongName}}
 LAST-MODIFIED:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
 LOCATION:{{site.data.wedding.Reception.Location.FriendlyName | replace: ",", "\,"}}
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}'s Wedding Reception
+SUMMARY:{{ site.data.wedding.LongName}}'s Wedding Reception
 TRANSP:OPAQUE
 BEGIN:VALARM
-DESCRIPTION:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}'s Wedding Ceremony #{{site.data.wedding.HashTag}} {{ "/" | absolute_url }}
+DESCRIPTION:{{ site.data.wedding.LongName}}'s Wedding Ceremony #{{site.data.wedding.HashTag}} {{ "/" | absolute_url }}
 ACTION:DISPLAY
 TRIGGER:-P0DT4H0M0S
 END:VALARM

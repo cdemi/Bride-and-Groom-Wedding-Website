@@ -1,7 +1,6 @@
 {
     "HashTag": "BrideAndGroom",
-    "Bride": "Bride",
-    "Groom": "Groom",
+    "LongName": "Bride and Groom",
     "Ceremony": {
         "Start": "2020-01-01T16:00:00+02:00",
         "End": "2020-01-01T18:00:00+02:00",
