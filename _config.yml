@@ -1,3 +1,5 @@
+exclude:
+  - .jekyll-cache
 theme-color: "#e9818c"
 defaults:
   -
