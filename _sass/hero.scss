@@ -1,7 +1,7 @@
 #hero {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)),url($base-url + "/assets/images/bannerHero2.jpg");
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)),url($base-url + "/assets/images/bannerHero4.jpg");
     background-position: bottom center;
     background-size: cover;
 
@@ -26,5 +26,32 @@
         font-size: 8vw;
         padding-top: 8vh;
         line-height: 1.5em;
+        display: none;
+    }
+
+    #rsvpButton {
+        text-align: center;
+        width: min-content;
+        margin: 0 auto;
+        padding-top: 13vh;
+        display: none;
+
+        button, a {
+            cursor: pointer;
+            background: #e9818c;
+            padding: 15px 50px;
+            border: none;
+            text-transform: uppercase;
+            display: inline-block;
+            color: #fff;
+            border-radius: 20px;
+            margin-top: 10px;
+            -webkit-transition: all .5s ease 0s;
+            -o-transition: all .5s ease 0s;
+            transition: all .5s ease 0s;
+            text-decoration: none;
+            width: 150px;
+            text-align: center;
+        }
     }
 }

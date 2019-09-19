@@ -17,3 +17,5 @@ $("#hero #counter").countdown(weddingDate.toDate(), {
         //$(this).html(event.strftime(totalHours.toLocaleString() + ' hours'));
     }
 }).countdown('start');
+
+$("#hero #counter").show();

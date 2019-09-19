@@ -1,8 +1,9 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Roboto+Slab&display=swap');
 
 $base-url: '{{ site.baseurl }}';
 
 @import 'main';
 @import 'hero';
+@import 'map';
