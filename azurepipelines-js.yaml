@@ -27,7 +27,7 @@ steps:
 
 - script: |
    bundle install
-   jekyll build $(Build.ArtifactStagingDirectory)
+   jekyll build -d $(Build.ArtifactStagingDirectory)
   displayName: 'jekyll build'
 
 - task: PublishBuildArtifacts@1
