@@ -10,41 +10,41 @@ X-WR-CALNAME:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }} {{ 
 X-WR-TIMEZONE:Europe/Malta
 X-WR-CALDESC:
 BEGIN:VEVENT
-DTSTART:{{ site.data.wedding.Ceremony.Start | date: "%Y%m%dT%H:%M:%S%:z" }}
-DTEND:{{ site.data.wedding.Ceremony.End }}
-DTSTAMP:20170827T102012Z
+DTSTART:{{ site.data.wedding.Ceremony.Start | to_utc | date: "%Y%m%dT%H%M%SZ" }}
+DTEND:{{ site.data.wedding.Ceremony.End | to_utc | date: "%Y%m%dT%H%M%SZ" }}
+DTSTAMP:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
 UID:0sptda3grm82ra9q308pcb16a0@google.com
 CREATED:20170827T101858Z
-LAST-MODIFIED:20170827T101859Z
-LOCATION:Parish Church of St Peter in Chains\, Birżebbuġa
+LAST-MODIFIED:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
+LOCATION:{{site.data.wedding.Ceremony.Location.FriendlyName | replace: ",", "\,"}}
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Mark and Eleanor's Wedding Ceremony
-DESCRIPTION:#MarkAndEl \nhttps://www.markandeleanor2019.com/
-ORGANIZER:Mark and Eleanor Brincat
+SUMMARY:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}'s Wedding Ceremony
+DESCRIPTION:#{{site.data.wedding.HashTag}} \n{{ "/" | absolute_url }}
+ORGANIZER:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}
 TRANSP:OPAQUE
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Mark and Eleanor's Wedding Ceremony #MarkAndEl https://www.markandeleanor2019.com/
+DESCRIPTION:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}'s Wedding Ceremony #{{site.data.wedding.HashTag}} {{ "/" | absolute_url }}
 TRIGGER:-P0DT4H0M0S
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20190511T163000Z
-DTEND:20190512T000000Z
-DTSTAMP:20170827T102012Z
+DTSTART:{{ site.data.wedding.Reception.Start | to_utc | date: "%Y%m%dT%H%M%SZ" }}
+DTEND:{{ site.data.wedding.Reception.End | to_utc | date: "%Y%m%dT%H%M%SZ" }}
+DTSTAMP:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
 UID:50j9mbi5rtl1e851g92fi77qv5@google.com
 CREATED:20170827T102005Z
-DESCRIPTION:#MarkAndEl \nhttps://www.markandeleanor2019.com/
-ORGANIZER:Mark and Eleanor Brincat
-LAST-MODIFIED:20170827T102005Z
-LOCATION:Chateau Buskett
+DESCRIPTION:#{{site.data.wedding.HashTag}} \n{{ "/" | absolute_url }}
+ORGANIZER:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}
+LAST-MODIFIED:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
+LOCATION:{{site.data.wedding.Reception.Location.FriendlyName | replace: ",", "\,"}}
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Mark and Eleanor's Wedding Reception
+SUMMARY:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}'s Wedding Reception
 TRANSP:OPAQUE
 BEGIN:VALARM
-DESCRIPTION:Mark and Eleanor's Wedding Ceremony #MarkAndEl https://www.markandeleanor2019.com/
+DESCRIPTION:{{ site.data.wedding.Bride }} and {{ site.data.wedding.Groom }}'s Wedding Ceremony #{{site.data.wedding.HashTag}} {{ "/" | absolute_url }}
 ACTION:DISPLAY
 TRIGGER:-P0DT4H0M0S
 END:VALARM

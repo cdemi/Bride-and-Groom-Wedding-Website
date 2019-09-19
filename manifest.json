@@ -2,8 +2,8 @@
 layout: ''
 ---
 {
-    "name": "#{{ site.data.wedding.ShortName }}",
-    "short_name": "#{{ site.data.wedding.ShortName }}",
+    "name": "#{{site.data.wedding.HashTag}}",
+    "short_name": "#{{site.data.wedding.HashTag}}",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
