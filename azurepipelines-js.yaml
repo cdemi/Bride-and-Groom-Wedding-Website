@@ -1,0 +1,39 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-16.04'
+  
+container: jekyll/jekyll:4
+
+steps:
+- task: UseRubyVersion@0
+  displayName: 'Use Ruby >= 2.4'
+
+- task: FileTransform@1
+  displayName: 'wedding.json Transform'
+  inputs:
+    folderPath: '_data/'
+    fileType: json
+    targetFiles: wedding.json
+
+- script: |
+   gem install jekyll bundler
+   bundle install --retry=3 --jobs=4
+  displayName: 'bundle install'
+
+- script: |
+   bundle install
+   jekyll build
+  displayName: 'jekyll build'
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+  inputs:
+    SourceFolder: '_site'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: site'
+  inputs:
+    ArtifactName: site
