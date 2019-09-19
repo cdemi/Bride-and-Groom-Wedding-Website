@@ -3,19 +3,6 @@ trigger:
 
 variables:
   JEKYLL_ENV: 'production'
-  HashTag: 'JamesAndSandra'
-  Ceremony.Start: '2020-04-26T15:45:00+02:00'
-  Ceremony.End: '2020-04-26T18:15:00+02:00'
-  Ceremony.Location.Coordinates.Latitude: '35.886337'
-  Ceremony.Location.Coordinates.Longitude: '14.403764'
-  Ceremony.Location.FriendlyName: 'Mdina Cathedral'
-  Ceremony.Location.GoogleMapPlaceID: 'ChIJQYG08r9RDhMRqkjwiMzSO3Y'
-  Reception.Start: '2020-04-26T18:45:00+02:00'
-  Reception.End: '2020-04-27T02:00:00+02:00'
-  Reception.Location.Coordinates.Latitude: '35.879723'
-  Reception.Location.Coordinates.Longitude: '14.411858'
-  Reception.Location.FriendlyName: 'The Xara Lodge'
-  Reception.Location.GoogleMapPlaceID: 'ChIJG8X0NrpRDhMRkQfIypNGfSg'
 
 pool:
   vmImage: 'ubuntu-16.04'
@@ -24,12 +11,15 @@ steps:
 - task: UseRubyVersion@0
   displayName: 'Use Ruby >= 2.4'
 
-- task: FileTransform@1
-  displayName: 'wedding.json Transform'
+steps:
+- task: CopyFiles@2
+  displayName: 'Copy wedding.json'
   inputs:
-    folderPath: '_data/'
-    fileType: json
-    targetFiles: wedding.json
+    SourceFolder: '_dataTemplate/'
+    Contents: wedding.json
+    TargetFolder: '_data/'
+    OverWrite: true
+
 
 - script: |
    gem install jekyll bundler
