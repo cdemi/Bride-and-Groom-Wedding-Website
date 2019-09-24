@@ -33,9 +33,12 @@ steps:
    bundle install --retry=3 --jobs=4 --system
   displayName: 'bundle install'
 
+- script:
+   chmod +x $(BUNDLE_PATH)/bin/*
+  displayName: 'chmod +x if from cache'
+
 - script: |
    ls -lah /home/vsts/work/1/.bundle/bin/
-   bundle exec which jekyll
    bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
