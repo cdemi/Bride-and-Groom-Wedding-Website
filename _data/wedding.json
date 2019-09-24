@@ -12,7 +12,8 @@
                 "Latitude": 45.464097,
                 "Longitude": 9.191924
             }
-        }
+        },
+        "CalendarUid": "43606c7a-4432-4169-9121-1ed92f7ddf44@brideandgroom.wedding"
     },
     "Reception": {
         "Start": "2020-01-01T18:30:00+02:00",
@@ -25,6 +26,7 @@
                 "Latitude": 45.478122,
                 "Longitude": 9.123961
             }
-        }
+        },
+        "CalendarUid": "bcdf25c6-a52f-49f6-bbaf-a8c525c2bd02@brideandgroom.wedding"
     }
 }
