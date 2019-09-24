@@ -21,7 +21,7 @@ steps:
 
 - task: CacheBeta@0
   inputs:
-    key: gembundle | $(Agent.OS) | ./Gemfile
+    key: gembundle2 | $(Agent.OS) | ./Gemfile
     path: vendor/bundle
   displayName: Cache gems bundle
 
