@@ -30,7 +30,7 @@ steps:
   displayName: 'gem install bundler'
 
 - script:
-   bundle install --retry=3 --jobs=4  --disable-shared-gems
+   bundle install --retry=3 --jobs=4 --system
   displayName: 'bundle install'
 
 - script: |
