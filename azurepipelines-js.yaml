@@ -34,8 +34,9 @@ steps:
     path: $(GEM_HOME)
   displayName: Cache gems
 
-- script:
-   bundle install
+- script: |
+   gem install jekyll bundler
+   bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
 - script:
