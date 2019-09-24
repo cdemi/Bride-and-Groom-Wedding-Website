@@ -8,27 +8,16 @@ pool:
   vmImage: 'ubuntu-16.04'
   
 steps:
-- task: UseRubyVersion@0
-  displayName: 'Use Ruby >= 2.4'
-
-- task: CopyFiles@2
-  displayName: 'Copy wedding.json'
+- task: Docker@0
+  displayName: Run Jekyll
   inputs:
-    SourceFolder: '_dataTemplate/jamessandra'
-    Contents: '*'
-    TargetFolder: '_data/'
-    OverWrite: true
-
-
-- script: |
-   gem install jekyll bundler
-   bundle install --retry=3 --jobs=4
-  displayName: 'bundle install'
-
-- script: |
-   bundle install
-   jekyll build -d $(Build.ArtifactStagingDirectory) -b https://jamesandsandra.z6.web.core.windows.net/
-  displayName: 'jekyll build'
+    action: 'Run an image'
+    imageName: 'jekyll/builder:latest'
+    volumes: |
+     $(Build.SourcesDirectory):/srv/jekyll
+     -d $(Build.ArtifactStagingDirectory):/srv/jekyll/_site
+    containerCommand: 'jekyll build'
+    detached: false
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
