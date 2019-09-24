@@ -3,8 +3,6 @@ trigger:
 
 variables:
   JEKYLL_ENV: 'production'
-  BUNDLE_PATH: $(Pipeline.Workspace)/.bundle
-  GEM_HOME: $(Pipeline.Workspace)/.gem
 
 
 pool:
@@ -25,26 +23,15 @@ steps:
 - task: CacheBeta@0
   inputs:
     key: gemsbundle | $(Agent.OS) | ./Gemfile
-    path: $(BUNDLE_PATH)
+    path: vendor/bundle
   displayName: Cache gems bundle
 
-- task: CacheBeta@0
-  inputs:
-    key: gems | $(Agent.OS) | ./Gemfile
-    path: $(GEM_HOME)
-  displayName: Cache gems
-
 - script: |
-   gem install jekyll bundler
-   bundle install --retry=3 --jobs=4
+   gem install bundler
+   bundle install --retry=3 --jobs=4 --path vendor/bundle
   displayName: 'bundle install'
 
 - script: |
-   gem env
-   ls $GEM_HOME
-   ls $GEM_HOME/gems
-   ls $GEM_HOME/bin
-   ls $BUNDLE_PATH
    bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
