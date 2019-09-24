@@ -31,7 +31,7 @@ steps:
   displayName: 'gem install bundler'
 
 - script:
-   bundle install --retry=3 --jobs=4
+   bundle install --retry=3 --jobs=4 --path $BUNDLE_PATH
   displayName: 'bundle install'
 
 - script: |
