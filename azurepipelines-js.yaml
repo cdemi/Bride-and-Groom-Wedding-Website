@@ -42,6 +42,7 @@ steps:
 
 - script: |
    gem env
+   ls $GEM_HOME
    bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
