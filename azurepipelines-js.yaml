@@ -35,7 +35,8 @@ steps:
 
 - script: |
    ls -lah /home/vsts/work/1/.bundle/bin/
-   bundle exec which jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
+   bundle exec which jekyll
+   bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
 - task: PublishBuildArtifacts@1
