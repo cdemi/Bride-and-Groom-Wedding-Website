@@ -40,7 +40,7 @@ steps:
   displayName: 'bundle install'
 
 - script:
-   bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
+   jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
 - task: PublishBuildArtifacts@1
