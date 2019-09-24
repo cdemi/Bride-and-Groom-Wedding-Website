@@ -33,6 +33,7 @@ steps:
   displayName: 'bundle install'
 
 - script: |
+   ls
    bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
