@@ -3,8 +3,6 @@ trigger:
 
 variables:
   JEKYLL_ENV: 'production'
-  BUNDLE_PATH: $(Pipeline.Workspace)/.bundle
-
 
 pool:
   vmImage: 'ubuntu-16.04'
@@ -24,14 +22,14 @@ steps:
 - task: CacheBeta@0
   inputs:
     key: gembundle | $(Agent.OS) | ./Gemfile
-    path: $(BUNDLE_PATH)
+    path: vendor/bundle
   displayName: Cache gems bundle
 
 - script: gem install bundler
   displayName: 'gem install bundler'
 
 - script:
-   bundle install --retry=3 --jobs=4 --path $BUNDLE_PATH
+   bundle install --retry=3 --jobs=4 --path vendor/bundle
   displayName: 'bundle install'
 
 - script: |
