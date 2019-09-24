@@ -4,7 +4,7 @@ trigger:
 variables:
   JEKYLL_ENV: 'production'
   BUNDLE_PATH: $(Pipeline.Workspace)/.bundle
-  GEM_HOME: $(Pipeline.Workspace)/.gems
+  GEM_HOME: $(Pipeline.Workspace)/.gem
 
 
 pool:
@@ -40,7 +40,7 @@ steps:
   displayName: 'bundle install'
 
 - script:
-   jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
+   bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
 - task: PublishBuildArtifacts@1
