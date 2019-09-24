@@ -21,7 +21,6 @@ steps:
     TargetFolder: '_data/'
     OverWrite: true
 
-steps:
 - task: CacheBeta@0
   inputs:
     key: gems | $(Agent.OS) | my.gemspec
