@@ -24,13 +24,13 @@ steps:
 
 - task: CacheBeta@0
   inputs:
-    key: gemsbundle | $(Agent.OS) | Gemfile
+    key: gemsbundle | $(Agent.OS) | ./Gemfile
     path: $(BUNDLE_PATH)
   displayName: Cache gems bundle
 
 - task: CacheBeta@0
   inputs:
-    key: gems | $(Agent.OS) | Gemfile
+    key: gems | $(Agent.OS) | ./Gemfile
     path: $(GEM_HOME)
   displayName: Cache gems
 
