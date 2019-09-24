@@ -4,7 +4,9 @@ trigger:
 variables:
   JEKYLL_ENV: 'production'
   BUNDLE_PATH: $(Pipeline.Workspace)/.bundle
- 
+  GEM_HOME: $(Pipeline.Workspace)/.gem
+
+
 pool:
   vmImage: 'ubuntu-16.04'
   
@@ -26,7 +28,14 @@ steps:
     path: $(BUNDLE_PATH)
   displayName: Cache gems bundle
 
+- task: CacheBeta@0
+  inputs:
+    key: gems | $(Agent.OS) | ./Gemfile
+    path: $(GEM_HOME)
+  displayName: Cache gems
+
 - script: |
+   export PATH=$GEM_HOME/bin:$PATH
    gem install jekyll bundler
    bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
