@@ -27,7 +27,7 @@ steps:
 
 - script: |
    bundle install
-   jekyll build -d $(Build.ArtifactStagingDirectory) -b https://jamesandsandra.z6.web.core.windows.net/
+   jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
 - task: PublishBuildArtifacts@1
