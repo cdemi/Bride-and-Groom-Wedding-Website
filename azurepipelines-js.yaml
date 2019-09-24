@@ -3,6 +3,7 @@ trigger:
 
 variables:
   JEKYLL_ENV: 'production'
+  BUNDLE_PATH: $(Pipeline.Workspace)/.bundle
 
 
 pool:
@@ -23,7 +24,7 @@ steps:
 - task: CacheBeta@0
   inputs:
     key: gemsbundle | $(Agent.OS) | ./Gemfile
-    path: vendor/bundle
+    path: $(BUNDLE_PATH)
   displayName: Cache gems bundle
 
 - script: |
