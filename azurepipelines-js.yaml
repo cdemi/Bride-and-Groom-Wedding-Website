@@ -22,7 +22,7 @@ steps:
 
 - task: CacheBeta@0
   inputs:
-    key: gembundle8 | $(Agent.OS) | ./Gemfile
+    key: dotbundle | $(Agent.OS) | ./Gemfile
     path: $(BUNDLE_PATH)
   displayName: Cache gems bundle
 
