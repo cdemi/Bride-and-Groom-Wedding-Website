@@ -33,7 +33,7 @@ BEGIN:VEVENT
 DTSTART:{{ site.data.wedding.Reception.Start | to_utc | date: "%Y%m%dT%H%M%SZ" }}
 DTEND:{{ site.data.wedding.Reception.End | to_utc | date: "%Y%m%dT%H%M%SZ" }}
 DTSTAMP:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
-UID:{{ site.data.wedding.Ceremony.CalendarUid }}
+UID:{{ site.data.wedding.Reception.CalendarUid }}
 CREATED:20170827T102005Z
 DESCRIPTION:#{{site.data.wedding.HashTag}} \n{{ "/" | absolute_url }}
 ORGANIZER:{{ site.data.wedding.LongName}}
