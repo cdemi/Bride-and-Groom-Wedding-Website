@@ -23,7 +23,7 @@ steps:
 - task: CacheBeta@0
   inputs:
     key: gembundle5 | $(Agent.OS) | ./Gemfile
-    path: $BUNDLE_PATH
+    path: $(BUNDLE_PATH)
   displayName: Cache gems bundle
 
 - script: gem install bundler
