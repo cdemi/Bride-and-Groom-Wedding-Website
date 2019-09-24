@@ -1,5 +1,5 @@
 theme-color: "#e9818c"
-exclude: [".jekyll-cache", "azurepipelines*", "Gemfile*", ".gitignore", ".git", "README.md". "configs"]
+exclude: [".jekyll-cache", "azurepipelines*", "Gemfile*", ".gitignore", ".git", "README.md", "configs"]
 defaults:
   -
     scope:
