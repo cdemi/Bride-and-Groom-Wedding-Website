@@ -15,7 +15,7 @@ steps:
     imageName: 'jekyll/builder:latest'
     volumes: |
      $(Build.SourcesDirectory):/srv/jekyll
-     -d $(Build.ArtifactStagingDirectory):/srv/jekyll/_site
+     $(Build.ArtifactStagingDirectory):/srv/jekyll/_site
     containerCommand: 'jekyll build'
     detached: false
 
