@@ -40,7 +40,8 @@ steps:
    bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
-- script:
+- script: |
+   gem env
    bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
