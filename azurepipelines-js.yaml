@@ -22,7 +22,7 @@ steps:
 
 - task: CacheBeta@0
   inputs:
-    key: gembundle5 | $(Agent.OS) | ./Gemfile
+    key: gembundle6 | $(Agent.OS) | ./Gemfile
     path: $(BUNDLE_PATH)
   displayName: Cache gems bundle
 
@@ -35,6 +35,7 @@ steps:
 
 - script: |
    bundle env
+   whereis jekyll
    bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
