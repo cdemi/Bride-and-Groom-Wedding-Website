@@ -36,6 +36,7 @@ steps:
 - script: |
    bundle env
    whereis jekyll
+   ls -lah $(BUNDLE_PATH)
    bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
