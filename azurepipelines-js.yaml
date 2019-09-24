@@ -35,7 +35,6 @@ steps:
   displayName: Cache gems
 
 - script: |
-   export PATH=$GEM_HOME/bin:$PATH
    gem install jekyll bundler
    bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
@@ -45,6 +44,7 @@ steps:
    ls $GEM_HOME
    ls $GEM_HOME/gems
    ls $GEM_HOME/bin
+   ls $BUNDLE_PATH
    bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
   displayName: 'jekyll build'
 
