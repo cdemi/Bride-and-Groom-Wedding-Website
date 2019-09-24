@@ -27,8 +27,10 @@ steps:
     path: $(BUNDLE_PATH)
   displayName: Cache gems bundle
 
-- script: |
-   gem install bundler
+- script: gem install bundler
+  displayName: 'gem install bundler'
+
+- script:
    bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
