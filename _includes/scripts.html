@@ -14,9 +14,7 @@
   crossorigin="anonymous"
 ></script>
 
-<script src="{{ site.baseurl }}/assets/js/scripts.js?{{
-    site.time | date: '%s%N'
-  }}"></script>
+<script src="{{ "/assets/js/scripts.js" | relative_url }}"></script>
 
 <script>
   // This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
