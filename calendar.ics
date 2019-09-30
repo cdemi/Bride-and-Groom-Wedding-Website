@@ -7,11 +7,11 @@ VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:{{ site.data.wedding.LongName}} {{ site.data.wedding.CeremonyStart | date: "%Y" }}
-X-WR-TIMEZONE:Europe/Malta
+X-WR-TIMEZONE:{{ site.data.wedding.Ceremony.Timezone }}
 X-WR-CALDESC:
 BEGIN:VEVENT
-DTSTART:{{ site.data.wedding.Ceremony.Start | to_utc | date: "%Y%m%dT%H%M%SZ" }}
-DTEND:{{ site.data.wedding.Ceremony.End | to_utc | date: "%Y%m%dT%H%M%SZ" }}
+DTSTART;TZID={{ site.data.wedding.Ceremony.Timezone }}:{{ site.data.wedding.Ceremony.Start | date: "%Y%m%dT%H%M%S" }}
+DTEND;TZID={{ site.data.wedding.Ceremony.Timezone }}:{{ site.data.wedding.Ceremony.End | date: "%Y%m%dT%H%M%S" }}
 DTSTAMP:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
 UID:{{ site.data.wedding.Ceremony.CalendarUid }}
 CREATED:20170827T101858Z
@@ -30,8 +30,8 @@ TRIGGER:-P0DT4H0M0S
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:{{ site.data.wedding.Reception.Start | to_utc | date: "%Y%m%dT%H%M%SZ" }}
-DTEND:{{ site.data.wedding.Reception.End | to_utc | date: "%Y%m%dT%H%M%SZ" }}
+DTSTART;TZID={{ site.data.wedding.Reception.Timezone }}:{{ site.data.wedding.Reception.Start | date: "%Y%m%dT%H%M%S" }}
+DTEND;TZID={{ site.data.wedding.Reception.Timezone }}:{{ site.data.wedding.Reception.End | date: "%Y%m%dT%H%M%S" }}
 DTSTAMP:{{site.time | date: "%Y%m%dT%H%M%SZ" }}
 UID:{{ site.data.wedding.Reception.CalendarUid }}
 CREATED:20170827T102005Z
