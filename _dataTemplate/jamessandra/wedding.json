@@ -4,7 +4,7 @@
     "Surname": "Debono",
     "Ceremony": {
         "Start": "2020-04-26T15:45:00+02:00",
-        "End": "2020-04-26T18:15:00+02:00",
+        "End": "2020-04-26T17:15:00+02:00",
         "Location": {
             "FriendlyName": "Mdina Cathedral",
             "GoogleMapPlaceID": "ChIJQYG08r9RDhMRqkjwiMzSO3Y",
@@ -17,7 +17,7 @@
         "CalendarUid": "12ptda3grm82ra9q308pcb16a0@google.com"
     },
     "Reception": {
-        "Start": "2020-04-26T18:45:00+02:00",
+        "Start": "2020-04-26T17:45:00+02:00",
         "End": "2020-04-27T02:00:00+02:00",
         "Location": {
             "FriendlyName": "The Xara Lodge",
