@@ -1,10 +1,12 @@
 .gm-style-iw {
   h1,
   h2 {
-    padding: 0;
+    padding: 0 0 3px 0;
     margin: 0;
     text-align: left;
     background-color: transparent;
+    line-height:1em;
+    
   }
 
   h1 {
@@ -20,6 +22,14 @@
 
 
 .gm-style-iw {
-  padding: 0 !important;
+  padding: 15px !important;
   margin: 0 !important;
+
+  button{
+    display: none !important;
+  }
+}
+
+.gm-style-iw-d{
+  overflow: auto !important;
 }
