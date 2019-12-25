@@ -36,6 +36,7 @@ steps:
 - script:
    chmod +x $(BUNDLE_PATH)/bin/*
   displayName: 'chmod +x if from cache'
+  continueOnError: true
 
 - script: 
    bundle exec jekyll build -d $(Build.ArtifactStagingDirectory) --config _config.yml,configs/jamessandra.yml
