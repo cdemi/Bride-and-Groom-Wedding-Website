@@ -9,7 +9,7 @@
       #{{ site.data.wedding.HashTag }}
     </title>
 
-    <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}" />
+    <link rel="stylesheet" href="{{ "/assets/css/styles.css?{{site.time | date: '%s'}}" | relative_url }}" />
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
