@@ -10,13 +10,13 @@
         position: new google.maps.LatLng({{site.data.wedding.Ceremony.Location.Coordinates.Latitude}}, {{site.data.wedding.Ceremony.Location.Coordinates.Longitude}}),
         markerUrl: "{{ "/assets/images/map_markers/church-min.png" | relative_url }}",
         info:
-          '<h1>{{site.data.wedding.Ceremony.Location.FriendlyName}}</h1><h2>Ceremony</h2>{{ site.data.wedding.Ceremony.Start | date: "%d/%m/%Y" }}<br/>Starts at {{ site.data.wedding.Ceremony.Start | date: "%H:%M" }}.<br/><a href="https://www.google.com/maps/dir/?api=1&destination_place_id={{site.data.wedding.Ceremony.Location.GoogleMapPlaceID | url_encode}}&destination={{site.data.wedding.Ceremony.Location.FriendlyName | url_encode}}" target="_blank">How to get there</a>'
+          '<h1>{{site.data.wedding.Ceremony.Location.FriendlyName}}</h1><h2>Ceremony</h2>{{ site.data.wedding.Ceremony.Start | date: "%d/%m/%Y" }}<br/>Starts at {{ site.data.wedding.Ceremony.Start | date: "%H:%M" }}.<br/><a href="https://www.google.com/maps/dir/?api=1&destination_place_id={{site.data.wedding.Ceremony.Location.GoogleMapPlaceID | url_encode}}&destination={{site.data.wedding.Ceremony.Location.FriendlyName | url_encode}}" target="_blank" rel="noopener">How to get there</a>'
       },
       {
         position: new google.maps.LatLng({{site.data.wedding.Reception.Location.Coordinates.Latitude}}, {{site.data.wedding.Reception.Location.Coordinates.Longitude}}),
         markerUrl: "{{ "/assets/images/map_markers/cake-min.png" | relative_url }}",
         info:
-          '<h1>{{site.data.wedding.Reception.Location.FriendlyName}}</h1><h2>Reception</h2>{{ site.data.wedding.Reception.Start | date: "%d/%m/%Y" }}<br/>Starts at {{ site.data.wedding.Reception.Start | date: "%H:%M" }}.<br/><a href="https://www.google.com/maps/dir/?api=1&destination_place_id={{site.data.wedding.Ceremony.Reception.GoogleMapPlaceID | url_encode}}&destination={{site.data.wedding.Reception.Location.FriendlyName | url_encode}}" target="_blank">How to get there</a>'
+          '<h1>{{site.data.wedding.Reception.Location.FriendlyName}}</h1><h2>Reception</h2>{{ site.data.wedding.Reception.Start | date: "%d/%m/%Y" }}<br/>Starts at {{ site.data.wedding.Reception.Start | date: "%H:%M" }}.<br/><a href="https://www.google.com/maps/dir/?api=1&destination_place_id={{site.data.wedding.Ceremony.Reception.GoogleMapPlaceID | url_encode}}&destination={{site.data.wedding.Reception.Location.FriendlyName | url_encode}}" target="_blank" rel="noopener">How to get there</a>'
       }
     ];
     var church = { lat: 35.826891, lng: 14.527366 };
