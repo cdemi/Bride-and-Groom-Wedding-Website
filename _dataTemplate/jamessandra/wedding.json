@@ -15,6 +15,17 @@
                 "Longitude": 14.403764
             }
         },
+        "Parking":{
+            "Location": {
+                "FriendlyName": "It-Tomba",
+                "GoogleMapPlaceID": "ChIJY0cPC5VRDhMRqllcj2IBsmc",
+                "Coordinates":
+                {
+                    "Latitude": 35.8855995,
+                    "Longitude": 14.4005334
+                }
+            }
+        },
         "CalendarUid": "12ptda3grm82ra9q308pcb16a0@google.com"
     },
     "Reception": {

@@ -14,6 +14,17 @@
                 "Longitude": 9.191924
             }
         },
+        "Parking":{
+            "Location": {
+                "FriendlyName": "Carducci Parking Srl",
+                "GoogleMapPlaceID": "ChIJFWKwo1fBhkcRQvTFLpqgwUI",
+                "Coordinates":
+                {
+                    "Latitude": 45.46157090000001,
+                    "Longitude": 9.172598899999999
+                }
+            }
+        },
         "CalendarUid": "43606c7a-4432-4169-9121-1ed92f7ddf44@brideandgroom.wedding"
     },
     "Reception": {
