@@ -6,7 +6,8 @@ $("#hero #counter").countdown(weddingDate.toDate(), {
 }).on('update.countdown', function (event) {
     if (event.elapsed) {
         var totalHours = event.offset.totalDays * 24 + event.offset.hours;
-        $(this).html(event.strftime('Married for<br/>' + event.strftime('%-m months %-W weeks %-d days')));
+        //$(this).html(event.strftime('Married for<br/>' + event.strftime('%-m month%!m %-W week%!W %-d day%!d')));
+        $(this).html(event.strftime('Married for<br/>' + event.strftime('%-I hour%!I')));
         $("#rsvpButton").hide();
     }
     else {
