@@ -12,7 +12,7 @@ $("#hero #counter").countdown(weddingDate.toDate(), {
     else {
         $("#rsvpButton").show();
         //$(this).html(event.strftime('%-D day%!D'));
-        $(this).html(event.strftime('%-D days %-H hours'));
+        $(this).html(event.strftime('%-D day%!D %-H hour%!H'));
         //var totalHours = event.offset.totalDays * 24 + event.offset.hours;
         //$(this).html(event.strftime(totalHours.toLocaleString() + ' hours'));
     }
